@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+}
+
+header {
+  font-family: "Overpass", sans-serif;
+  border-radius: 0 0 0 3em;
+  position: relative;
+  padding: 3em 1em;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#d5a79a), color-stop(#e29383), color-stop(#ed7d6f), color-stop(#f7625f), to(#ff3d54));
+  background-image: linear-gradient(to right bottom, #d5a79a, #e29383, #ed7d6f, #f7625f, #ff3d54);
+}
+
+header .open {
+  display: block;
+}
+
+header nav {
+  display: none;
+  width: calc(100% - 2em);
+  overflow: hidden;
+  position: absolute;
+  top: 7.5em;
+  background-color: white;
+  border-radius: 0.3em;
+  -webkit-transition: max-height 0.25s ease-out;
+  transition: max-height 0.25s ease-out;
+}
+
+header .burger {
+  position: absolute;
+  top: 3.5em;
+  right: 1em;
+}
+
+header ul {
+  padding: 0.75em;
+  list-style-type: none;
+}
+
+header ul a {
+  text-decoration: none;
+}
+
+header ul li {
+  text-align: center;
+  padding: 0.75em;
+}
+
+header ul li a {
+  position: relative;
+  color: #1f3f5b;
+  font-weight: 600;
+}
+
+header ul li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -1.5em;
+  top: 0.25em;
+  width: 1em;
+  height: 1em;
+  background: transparent url("./images/icon-arrow-dark.svg") no-repeat;
+}
+
+header ul ul {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
