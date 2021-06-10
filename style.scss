@@ -210,6 +210,16 @@ h4 {
   font-weight: 300;
 }
 
+h5 {
+  font-family: "Overpass", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  margin: 2rem 0 1rem 0;
+  a {
+    color: hsl(0, 0%, 100%);
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -231,36 +241,70 @@ main {
     padding: 2rem 0;
   }
 
+  .light {
+    color: hsl(0, 0%, 100%);
+  }
+
   .dark {
     position: relative;
-    margin-top: 17.5rem;
-    padding-top: 12rem;
-    overflow: hidden;
-    z-index: 0;
-    background: rgb(44, 45, 63);
-    background: linear-gradient(
-      135deg,
-      rgba(44, 45, 63, 1) 0%,
-      rgba(63, 65, 100, 1) 100%
-    );
 
-    &::before {
-      display: block;
-      content: "";
+    // overflow: hidden;
+    z-index: 0;
+
+    .dark-content {
       width: 100%;
       height: 100%;
-      position: absolute;
-      top: -30%;
-      left: 0;
-      opacity: 1;
-      background-image: url("./images/bg-pattern-circles.svg");
-      background-size: cover;
+      position: relative;
+      margin-top: 17.5rem;
+      margin-bottom: 5rem;
+      padding-bottom: 4rem;
+      padding-top: 12rem;
+      overflow: hidden;
+      border-radius: 0 6rem 0 6rem;
+      background: rgb(44, 45, 63);
+      background: linear-gradient(
+        135deg,
+        rgba(44, 45, 63, 1) 0%,
+        rgba(63, 65, 100, 1) 100%
+      );
       z-index: -1;
+      &::before {
+        display: block;
+        content: "";
+        width: 160%;
+        height: 100%;
+        position: absolute;
+        top: -50%;
+        left: -30%;
+        opacity: 1;
+        background-image: url("./images/bg-pattern-circles.svg");
+        background-size: cover;
+        z-index: -1;
+      }
+      h2 {
+        margin-top: -1.2rem;
+      }
     }
 
     img {
       position: absolute;
       top: -11rem;
     }
+  }
+}
+
+footer {
+  background-color: hsl(240, 10%, 16%);
+  border-radius: 0 6rem 0 0;
+  padding: 5rem 0;
+  text-align: center;
+
+  img {
+    margin-bottom: 3rem;
+  }
+
+  ul a {
+    font-family: "Overpass", sans-serif;
+    color: hsl(240, 2%, 79%);
   }
 }
